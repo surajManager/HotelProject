@@ -117,6 +117,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customerinfo.cs" />
     <Compile Include="Models\RoomService.cs" />
     <Compile Include="Models\Roominfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,6 +146,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Room\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Room\Available.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Room\Booked.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Room\CustomerList.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -17,5 +17,27 @@ namespace HotelProjx.Controllers
             return View(roominfo);
         }
 
+        public ActionResult Available()
+        {
+            RoomService roomService = new RoomService();
+            IEnumerable<Roominfo> roominfo = roomService.Roominfo.Where(b => b.BookingID == 0).ToList();
+            return View(roominfo);
+        }
+
+        public ActionResult Booked()
+        {
+            RoomService roomService = new RoomService();
+            IEnumerable<Roominfo> roominfo = roomService.Roominfo.Where(b => b.BookingID == 1).ToList();
+            return View(roominfo);
+        }
+
+
+        public ActionResult CustomerList()
+        {
+            RoomService roomService = new RoomService();
+            IEnumerable<Customerinfo> customerinfo = roomService.customerinfo.ToList();
+            return View(customerinfo);
+        }
+        
     }
 }

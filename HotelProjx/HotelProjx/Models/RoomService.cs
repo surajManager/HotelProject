@@ -9,6 +9,6 @@ namespace HotelProjx.Models
     public class RoomService : DbContext
     {
         public DbSet<Roominfo> Roominfo { get; set; }
-
+        public DbSet<Customerinfo> customerinfo { get; set; }
     }
 }

@@ -10,11 +10,14 @@ namespace HotelProjx.Models
      [Table("tbl_Roominfo")]
     public class Roominfo
     {
-        [Key]
+        [Key]   
         public string RoomNumber { get; set; }
         public string RoomType  { get; set; }
         public string BookingStatus { get; set; }
         public int BookingID { get; set; }    
         public int Price { get; set; } 
         }
-    }
+
+    
+   
+     }

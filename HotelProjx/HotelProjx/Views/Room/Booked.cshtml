@@ -1,17 +1,16 @@
 ﻿@model IEnumerable<HotelProjx.Models.Roominfo>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Booked";
 }
 
-<h2>Index</h2>
+<h2>Booked</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table>
     <tr>
-
         <th>
             @Html.DisplayNameFor(model => model.RoomNumber)
         </th>
@@ -48,18 +47,14 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { id=item.RoomNumber }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RoomNumber }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RoomNumber })
         </td>
     </tr>
 }
 
 </table>
 <div>
-        @Html.ActionLink("Available", "Available")
+        @Html.ActionLink("Back to Main", "Index")
     </div>
-<div>
-        @Html.ActionLink("Booked", "Booked")
-    </div>
-
