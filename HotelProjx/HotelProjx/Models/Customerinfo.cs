@@ -7,8 +7,8 @@ using System.Web;
 
 namespace HotelProjx.Models
 {
-   
-        [Table("tblCustomer")]
+
+        [Table("tbl_Customer")]
         public class Customerinfo
         {
             [Key]

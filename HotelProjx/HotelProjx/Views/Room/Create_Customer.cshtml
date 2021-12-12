@@ -1,0 +1,69 @@
+﻿@model HotelProjx.Models.Customerinfo
+
+@{
+    ViewBag.Title = "Create_Customer";
+}
+
+<h2>Create_Customer</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Customerinfo</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Gender)
+        </div>
+        <div class="editor-field">
+          @Html.DropDownList("Gender", new List<SelectListItem>
+{
+new SelectListItem { Text = "Male", Value="Male" },
+new SelectListItem { Text = "Female", Value="Female" }
+}, "Select Gender")
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Emailaddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Emailaddress)
+            @Html.ValidationMessageFor(model => model.Emailaddress)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Phone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Phone)
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CCNum)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CCNum)
+            @Html.ValidationMessageFor(model => model.CCNum)
+        </div>
+
+       
+       
+         <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

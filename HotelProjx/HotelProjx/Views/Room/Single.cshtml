@@ -1,20 +1,16 @@
 ﻿@model IEnumerable<HotelProjx.Models.Roominfo>
 
 @{
-    ViewBag.Title = "Available";
+    ViewBag.Title = "Single Rooms";
 }
 
-<h2>Available</h2>
+<h2>Single Rooms</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table>
     <tr>
-
-         <th>
-            @Html.DisplayNameFor(model => model.RoomNumber)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.RoomType)
         </th>
@@ -32,9 +28,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.RoomNumber)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.RoomType)
         </td>
@@ -58,15 +51,5 @@
 </table>
 
 <div>
-        @Html.ActionLink("Single Rooms", "Single")
-    </div>
-<div>
-        @Html.ActionLink("Double Rooms", "Double")
-    </div>
-<div>
-        @Html.ActionLink("Delux Rooms", "Delux")
-    </div>
-
-<div>
-        @Html.ActionLink("Back to Main", "Index")
+        @Html.ActionLink("Back to Available", "Available")
     </div>

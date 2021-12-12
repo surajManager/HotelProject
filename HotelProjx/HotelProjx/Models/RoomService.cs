@@ -10,5 +10,6 @@ namespace HotelProjx.Models
     {
         public DbSet<Roominfo> Roominfo { get; set; }
         public DbSet<Customerinfo> customerinfo { get; set; }
+        public DbSet<Bookinginfo> Bookinginfos { get; set; }
     }
 }

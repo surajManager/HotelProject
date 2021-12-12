@@ -1,0 +1,64 @@
+﻿@model HotelProjx.Models.Bookinginfo
+
+@{
+    ViewBag.Title = "Create_Booking";
+}
+
+<h2>Create_Booking</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Bookinginfo</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Cust_ID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Cust_ID", "Select Customer ID")
+            @Html.ValidationMessageFor(model => model.Cust_ID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RoomNum)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RoomNum)
+            @Html.ValidationMessageFor(model => model.RoomNum)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.checkin)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.checkin)
+            @Html.ValidationMessageFor(model => model.checkin)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.checkout)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.checkout)
+            @Html.ValidationMessageFor(model => model.checkout)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BookDays)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BookDays)
+            @Html.ValidationMessageFor(model => model.BookDays)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
